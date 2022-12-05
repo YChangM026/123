@@ -19,8 +19,8 @@ if st.checkbox('알아보기'):
     line_data = df.loc[(df['호선명'] == selectbox)]
     line_data = line_data[line_data.columns.difference(['월', '호선명', '승하차'])]
     s_index = line_data.index.tolist()
-    st.area_chart(line_data.loc[s_index[0]], use_container_width=True)
-    st.bar_chart(line_data.loc[s_index[0]], use_container_width=True)
+    st.area_chart(line_data.loc[s_index[0]])
+    st.bar_chart(line_data.loc[s_index[0]])
 
     st.subheader('비교하기')
     time = df[['호선명','04-05시', '05-06시', '06-07시', '07-08시','08-09시','09-10시','10-11시','11-12시','12-13시','13-14시',
