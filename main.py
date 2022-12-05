@@ -9,7 +9,7 @@ import plotly
 st.title('2022년 10월 서울역 지하철🚉')
 st.subheader('시간별 승차 인원\n시간: 04~24시')
 
-df = pd.read_csv('https://github.com/YChangM026/123/blob/main/fix.csv')
+df = pd.read_csv('fix.csv')
 
 
 if st.checkbox('알아보기'):
