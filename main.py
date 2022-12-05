@@ -46,4 +46,4 @@ if st.checkbox('알아보기'):
         fig.update_layout(
                     title_font_size=20
                     )
-        plotly.offline.plot(fig)
+        plotly.offline.plot(fig,filename='https://ychangm026-123-main-ciu5s9.streamlit.app/')
