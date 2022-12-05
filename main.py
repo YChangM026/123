@@ -32,18 +32,19 @@ if st.checkbox('알아보기'):
     st.bar_chart(time)
 
     
-    values = df['18-19시']
-    names = df['호선명']
-    fig=px.pie(df,
-                values=values,
-                names=names,
-                title = '18-19시'
-                )
-    fig.update_traces(
-                textposition = 'inside',
-                textinfo='percent+label'
-                )
-    fig.update_layout(
-                title_font_size=20
-                )
-    fig.show()
+    if st.checkbox('가장 많이 타는 시간:18-19시 비율보기'):
+        values = df['18-19시']
+        names = df['호선명']
+        fig=px.pie(df,
+                    values=values,
+                    names=names,
+                    title = '18-19시'
+                    )
+        fig.update_traces(
+                    textposition = 'inside',
+                    textinfo='percent+label'
+                    )
+        fig.update_layout(
+                    title_font_size=20
+                    )
+        st.plotly_chart(fig)
