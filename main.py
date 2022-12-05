@@ -13,7 +13,6 @@ df = pd.read_csv('fix.csv')
 
 
 if st.checkbox('알아보기'):
-    df.set_index = df['월']
     selectbox = st.sidebar.selectbox("몇 호선?", ("1호선","4호선","경의선","공항철도"))
 
     st.subheader('호선별 승차 인원')
